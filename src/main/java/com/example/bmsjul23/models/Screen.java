@@ -9,11 +9,14 @@ import java.util.List;
 @Entity
 public class Screen extends BaseModel{
     private String name;
-    @OneToMany
+    @OneToMany(mappedBy = "screen")
     private List<Seat> seats;
 
     private ScreenStatus status;
     @ElementCollection
     @Enumerated(value = EnumType.ORDINAL)
     private List<Feature> features;
+
+    @ManyToOne
+    private Theatre theatre;
 }

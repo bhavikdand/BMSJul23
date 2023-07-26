@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.List;
 
 @Data
-@Entity
+@Entity(name = "shows")
 public class Show extends BaseModel{
 //    private Movie movie;
     private Date startTime;

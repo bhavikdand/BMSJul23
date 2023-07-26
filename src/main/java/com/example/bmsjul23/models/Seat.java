@@ -1,6 +1,7 @@
 package com.example.bmsjul23.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 
 @Data
@@ -13,4 +14,6 @@ public class Seat extends BaseModel{
     int topLeftY;
     int bottomRightX;
     int bottomRightY;
+    @ManyToOne
+    Screen screen;
 }
